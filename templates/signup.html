@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Create Account</h1>
+    <form action = "{{ url_for('addrec') }}" method = "POST">
+      <input type = "text" name = "unm" placeholder="Username" required/>
+      
+      <input type="email" name="email" placeholder="Email" required></textarea>
+      
+      <input type = "password" name = "pwd" placeholder="Password" required/><br>
+      <input type = "submit" value = "Signup" style="background-color: #000000; color: white;" /><br>
+   </form>
+  </div>
+</body>
+</html>

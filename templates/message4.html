@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title> msg4</title>
+        <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column; /* added */
+}
+
+.waviy {
+  position: relative;
+  display: flex; /* added */
+  justify-content: center; /* added */
+  align-items: center; /* added */
+  flex-wrap: wrap; /* added */
+  margin-bottom: 30px; /* added */
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i));
+  text-align: center;
+  word-spacing: 15px; /* added */
+  margin-right: 15px;
+}
+
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+#center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#click-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: grey;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+        </style>
+    </head>
+    <body>
+            <div class="waviy">
+              <span style="--i:1">you</span>
+              <span style="--i:2">  have </span>
+              <span style="--i:3">  choosen </span>
+              <span style="--i:4">  a</span>
+              <span style="--i:5">  right </span>
+              <span style="--i:6">  way</span>
+              <span style="--i:7">  to</span>
+              <span style="--i:8">  catch</span>
+              <span style="--i:9">  the</span>
+              <span style="--i:10"> criminal.</span><br>
+              <span style="--i:11"> you </span>
+              <span style="--i:12"> have </span>
+              <span style="--i:13"> successfully</span>
+              <span style="--i:14"> reached</span>
+              <span style="--i:15"> his </span>
+              <span style="--i:16"> safehouse </span>
+              <span style="--i:17"> and </span>
+              <span style="--i:18"> he </span>
+              <span style="--i:19"> is </span>
+              <span style="--i:20"> a </span>
+              <span style="--i:21"> step </span>
+              <span style="--i:22"> away</span><br>
+              <span style="--i:23"> from </span>
+              <span style="--i:24"> us. </span>
+             </div>
+             <div id="center-button">
+                <a href="{{url_for('endpuz')}}">
+                <button style="align-items: center;"id="click-button">Next</button>
+                </a>
+            </div>
+    </body>
+</html>

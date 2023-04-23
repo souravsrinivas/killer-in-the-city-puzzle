@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Pin Locker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <style>
+
+body {
+    background-image: url('https://www.networkmedics.com/blog/wp-content/uploads/2019/07/Cybersecurity-image-2.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+    .container1 {
+			padding-top: 250px; /* Add some top padding to move contents down */
+			text-align: center; /* Center contents horizontally */
+      padding-right: 1000px;
+		}
+      </style>
+    <script>
+        function myFunction3() {
+        alert("It is a 6-digit passcode");
+        }
+        function myFunction1() {
+        alert("The last 4 digits are of the digits in Ramanujan number");
+        }
+        function myFunction2() {
+        alert("A professional batsmen used to score this 2-digit milestone(for first two digits)");
+        }
+    </script>
+  </head>
+  <body style="display: flex; flex-direction: column; align-items: center;">
+    <div class="container1">
+    {% if locked %}
+      <h1 style="text-align: center;color: azure;">CRACK THE CODE</h1>
+      <form action="{{url_for('unlock')}}" method="post">
+        <label for="pin">Enter the pin:</label>
+        <input type="text" name="pin" id="pin" autofocus>
+        <input type="submit" value="Unlock" style="background-color: rgb(0, 0, 0);color: white;">
+      </form>
+    {% endif %}
+    <div class="btn-group" style="display: flex; flex-direction: row; justify-content: center;">
+      <button onclick="myFunction3()" style="background-color: rgb(0, 0, 0);color: white;">clue1</button>
+      <button onclick="myFunction1()" style="background-color: rgb(0, 0, 0);color: white;">clue2</button>
+      <button onclick="myFunction2()" style="background-color: rgb(0, 0, 0);color: white; align-items: center;justify-content: center;display: flex;">clue3</button>
+    </div>
+    </div>
+  </body>
+</html>

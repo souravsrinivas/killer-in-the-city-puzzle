@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title> msg5</title>
+        <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column; /* added */
+}
+
+.waviy {
+  position: relative;
+  display: flex; /* added */
+  justify-content: center; /* added */
+  align-items: center; /* added */
+  flex-wrap: wrap; /* added */
+  margin-bottom: 30px; /* added */
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i));
+  text-align: center;
+  word-spacing: 15px; /* added */
+  margin-right: 15px;
+}
+
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+#center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#click-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: grey;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+        </style>
+    </head>
+    <body>
+            <div class="waviy">
+              <span style="--i:1">CONGRATULATIONS</span>
+              <span style="--i:2">  AGENT </span>
+              <span style="--i:3">  YOU  </span>
+              <span style="--i:4">  HAVE</span>
+              <span style="--i:5">  CAUGHT </span>
+              <span style="--i:6">  THE</span>
+              <span style="--i:7">  CRIMINAL.</span>
+             </div>
+             <div id="center-button">
+                <a href="{{url_for('msg1')}}">
+                <button style="align-items: center;"id="click-button">play again</button>
+                </a>
+            </div>
+    </body>
+</html>
